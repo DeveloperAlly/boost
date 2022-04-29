@@ -12,7 +12,7 @@ Boost exposes `libp2p` interfaces for making storage and retrieval deals, a web 
 
 Currently, Boost installation is supported on macOS and Linux platforms.
 
-You need to have Go and Rust installed on your machine in order to build Boost, as well as some additional system dependencies, usually provided by your distribution: 
+You need to have [Go](https://go.dev/doc/install) and [Rust](https://www.rust-lang.org/tools/install) installed on your machine in order to build Boost, as well as some additional system dependencies, usually provided by your distribution: 
 
 Ubuntu/Debian:
 ```
@@ -202,3 +202,15 @@ http://localhost:3000
 ## License
 
 Dual-licensed under [MIT](https://github.com/filecoin-project/boost/blob/main/LICENSE-MIT) + [Apache 2.0](https://github.com/filecoin-project/boost/blob/main/LICENSE-APACHE)
+
+
+## Issues
+1. ./install-filcrypto: line 28: jq: command not found
+ > (Mac) Install jq using [homebrew](https://brew.sh/)
+ > brew install jq
+2. pkg-config: exec: "pkg-config": executable file not found in $PATH
+ > brew install pkg-config
+3. ld: library not found for -lhwloc
+ > brew install hwloc && brew link --force hwloc
+ > export LIBRARY_PATH=/opt/homebrew/Cellar/hwloc/2.7.0
+ > export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/lib
